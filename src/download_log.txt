@@ -1,0 +1,60 @@
+2026-03-16 19:03:58,784 [INFO] Modo: descarga nacional completa
+2026-03-16 19:03:58,784 [INFO] 
+────────────────────────────────────────────────────────────
+2026-03-16 19:03:58,784 [INFO] Dataset : incidencia_delictiva_municipal.csv
+2026-03-16 19:03:58,784 [INFO] Fuente  : SESNSP – Incidencia delictiva municipal 2015-2025
+2026-03-16 19:03:58,784 [INFO] URL     : https://repodatos.atdt.gob.mx/api_update/sesnsp/incidencia_delictiva/IDM_NM_dic25.csv
+2026-03-16 19:04:00,110 [INFO]   ... 10.0 MB descargados
+2026-03-16 19:04:30,089 [INFO]   ... 180.0 MB descargados
+2026-03-16 19:04:55,983 [INFO]   ... 330.0 MB descargados
+2026-03-16 19:04:57,733 [INFO]   ... 340.0 MB descargados
+2026-03-16 19:05:01,548 [INFO]   Descargado: 369860.7 KB
+2026-03-16 19:05:01,889 [INFO]   ✓ Guardado en: ..\data\raw\incidencia_delictiva_municipal.csv
+2026-03-16 19:05:01,904 [INFO] 
+────────────────────────────────────────────────────────────
+2026-03-16 19:05:01,905 [INFO] Dataset : incidencia_delictiva_estatal.csv
+2026-03-16 19:05:01,905 [INFO] Fuente  : SESNSP – Incidencia delictiva estatal 2015-2025
+2026-03-16 19:05:01,905 [INFO] URL     : https://repodatos.atdt.gob.mx/api_update/sesnsp/incidencia_delictiva/INM_estatal_dic25.csv
+2026-03-16 19:05:11,168 [INFO]   Descargado: 55139.6 KB
+2026-03-16 19:05:11,235 [INFO]   ✓ Guardado en: ..\data\raw\incidencia_delictiva_estatal.csv
+2026-03-16 19:05:11,238 [INFO] 
+────────────────────────────────────────────────────────────
+2026-03-16 19:05:11,239 [INFO] Dataset : indice_marginacion_municipal_2020.csv
+2026-03-16 19:05:11,239 [INFO] Fuente  : CONAPO – Índice de marginación municipal 2020
+2026-03-16 19:05:11,240 [INFO] URL     : https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-03-16 19:05:11,240 [WARNING]   SSL verification desactivado para este dominio.
+2026-03-16 19:05:11,416 [WARNING]   Intento 1/3 fallido: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-03-16 19:05:16,516 [WARNING]   Intento 2/3 fallido: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-03-16 19:05:21,603 [WARNING]   Intento 3/3 fallido: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-03-16 19:05:21,603 [ERROR]   ✗ ERROR en 'indice_marginacion_municipal_2020.csv': 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-03-16 19:05:21,604 [INFO] 
+────────────────────────────────────────────────────────────
+2026-03-16 19:05:21,604 [INFO] Dataset : pobreza_municipal_2020.csv
+2026-03-16 19:05:21,605 [INFO] Fuente  : CONEVAL – Indicadores de pobreza municipal 2020
+2026-03-16 19:05:21,605 [INFO] URL     : https://www.coneval.org.mx/Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores de pobreza municipal_2020.csv
+2026-03-16 19:05:26,224 [INFO]   Descargado: 568.0 KB
+2026-03-16 19:05:26,225 [INFO]   ✓ Guardado en: ..\data\raw\pobreza_municipal_2020.csv
+2026-03-16 19:05:26,225 [INFO] 
+────────────────────────────────────────────────────────────
+2026-03-16 19:05:26,225 [INFO] Dataset : censo_iter_municipios_2020.csv
+2026-03-16 19:05:26,225 [INFO] Fuente  : INEGI – Censo 2020 ITER (~500 MB ZIP, puede tardar varios minutos)
+2026-03-16 19:05:26,225 [INFO] URL     : https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip
+2026-03-16 19:06:58,708 [INFO]   ... 10.0 MB descargados
+2026-03-16 19:08:23,810 [INFO]   ... 20.0 MB descargados
+2026-03-16 19:09:50,743 [INFO]   ... 30.0 MB descargados
+2026-03-16 19:10:37,142 [INFO]   Descargado: 35757.6 KB
+2026-03-16 19:10:37,143 [INFO]   Extrayendo 'iter_00_cpv2020/conjunto_de_datos/conjunto_de_datos_iter_00CSV20.csv' del ZIP…
+2026-03-16 19:10:37,560 [INFO]   Extraído CSV: 146153.2 KB
+2026-03-16 19:10:37,710 [INFO]   ✓ Guardado en: ..\data\raw\censo_iter_municipios_2020.csv
+2026-03-16 19:10:37,717 [INFO] 
+────────────────────────────────────────────────────────────
+2026-03-16 19:10:37,717 [INFO] Dataset : indicadores_laborales_municipios.csv
+2026-03-16 19:10:37,718 [INFO] Fuente  : INEGI – Indicadores laborales municipales (PEA, ocupación, informalidad)
+2026-03-16 19:10:37,718 [INFO] URL     : https://www.inegi.org.mx/contenidos/programas/ilmm/2020/datosabiertos/ILMM_2020.csv
+2026-03-16 19:10:38,942 [INFO]   ... 0.0 MB descargados
+2026-03-16 19:10:38,943 [INFO]   Descargado: 2.2 KB
+2026-03-16 19:10:38,943 [INFO]   ✓ Guardado en: ..\data\raw\indicadores_laborales_municipios.csv
+2026-03-16 19:10:38,944 [INFO] 
+════════════════════════════════════════════════════════════
+2026-03-16 19:10:38,944 [WARNING] Datasets con error (1):
+2026-03-16 19:10:38,944 [WARNING]   - indice_marginacion_municipal_2020.csv: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
