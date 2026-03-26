@@ -1,0 +1,14 @@
+nombre_campo,descripcion,tipo_dato,ejemplo
+anio,Año de registro de la incidencia delictiva,entero,2020
+mes,Mes de registro (numérico o texto),entero/string,1
+entidad,Nombre de la entidad federativa,string,Sonora
+cve_entidad,Clave numérica de la entidad federativa,entero,26
+municipio,Nombre del municipio,string,Hermosillo
+cve_municipio,Clave numérica del municipio,entero,30030
+tipo_delito,Categoría general del delito,string,Robo
+subtipo_delito,Subcategoría del delito,string,Robo a casa habitación
+modalidad,Forma en que ocurrió el delito,string,Con violencia
+bien_juridico,Clasificación del bien afectado,string,Patrimonio
+total_casos,Número de casos registrados,entero,125
+fuente,Institución que reporta los datos,string,SESNSP
+unidad_medida,Unidad de medición,string,Casos
