@@ -12,8 +12,8 @@ URLS_ARCHIVOS = {
     "CONEVAL_pobreza_a_nivel_municipal_indicadores" : "https://www.datos.gob.mx/dataset/b6981ccc-083b-4e57-ba6f-d800a7398fa8/resource/6e409e3a-aa08-45f5-b84b-f5d8cc6fafa8/download/pobreza_municipal.csv"
 }
 
-RUTA_DATASETS_CONEVAL_POBREZA_MEXICO = "../../data/raw/CONEVAL_pobreza_mexico/"
-RUTA_DICCIONARIOS_CONEVAL_POBREZA_MEXICO = "../../data/raw/diccionarios_CONEVAL_pobreza_mexico/"
+RUTA_DATASETS_CONEVAL_POBREZA_MEXICO = os.path.join("..","..","data","raw","CONEVAL_pobreza_mexico")
+RUTA_DICCIONARIOS_CONEVAL_POBREZA_MEXICO = os.path.join("..","..","data","raw","diccionarios_CONEVAL_pobreza_mexico")
 
 def descarga_datos_CONEVAL_pobreza_mexico():
     headers = {
@@ -77,9 +77,11 @@ def generar_diccionarios_datos():
 
             df_diccionario.to_csv(ruta_nombre_diccionario)
 
-
-if __name__ == "__main__":
+def main():
     print("Descargado datos CONEVAL... \n")
     descarga_datos_CONEVAL_pobreza_mexico()
     print("Generando diccionario datos CONEVAL... \n")
     generar_diccionarios_datos()
+
+if __name__ == "__main__":
+    main()
