@@ -1,5 +1,5 @@
 import os
-import pathlib
+from pathlib import Path
 import requests
 import pandas as pd
 
@@ -12,51 +12,52 @@ URLS_ARCHIVOS = {
     "CONEVAL_pobreza_a_nivel_municipal_indicadores" : "https://www.datos.gob.mx/dataset/b6981ccc-083b-4e57-ba6f-d800a7398fa8/resource/6e409e3a-aa08-45f5-b84b-f5d8cc6fafa8/download/pobreza_municipal.csv"
 }
 
-RUTA_DATASETS_CONEVAL_POBREZA_MEXICO = os.path.join("..","..","data","raw","CONEVAL_pobreza_mexico")
-RUTA_DICCIONARIOS_CONEVAL_POBREZA_MEXICO = os.path.join("..","..","data","raw","diccionarios_CONEVAL_pobreza_mexico")
+RUTA_BASE = Path(__file__).parent
+RUTA_DATASETS_CONEVAL_POBREZA_MEXICO = RUTA_BASE / "../" / "../" / "data" / "raw" / "CONEVAL_pobreza_mexico"
+RUTA_DICCIONARIOS_CONEVAL_POBREZA_MEXICO = RUTA_BASE / "../" / "../" / "references" / "diccionarios_CONEVAL_pobreza_mexico"
 
 def descarga_datos_CONEVAL_pobreza_mexico():
+    
     headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
     "Referer": "https://www.datos.gob.mx/",
     }
+    
+    directorio_datasets = Path(RUTA_DATASETS_CONEVAL_POBREZA_MEXICO)
 
-    if not os.path.exists(RUTA_DATASETS_CONEVAL_POBREZA_MEXICO):
-        os.makedirs(RUTA_DATASETS_CONEVAL_POBREZA_MEXICO, exist_ok=True)
+    if not directorio_datasets.exists():
+        directorio_datasets.mkdir(parents=True, exist_ok=True)
 
     for i, (clave, valor) in enumerate(URLS_ARCHIVOS.items()):
         
-        nombre_archivo = clave + ".csv"
-        ruta_completa_archivo = os.path.join(RUTA_DATASETS_CONEVAL_POBREZA_MEXICO, nombre_archivo)
+        nombre_archivo = f"{clave}.csv"
+        ruta_completa_archivo = Path(RUTA_DATASETS_CONEVAL_POBREZA_MEXICO) / nombre_archivo
 
         response = requests.get(valor, headers=headers, timeout=60)
         response.raise_for_status()
 
-        # --- Validación 1: Código de estado HTTP ---
-        #print(f"Status code: {response.status_code}")
         if response.status_code != 200:
             raise Exception(f"Error HTTP {response.status_code}: {response.reason}")
-        # --- Validación 3: Que el contenido no esté vacío ---
         if not response.content:
             raise Exception("La respuesta llegó vacía.")
 
-        # --- Guardar archivo ---
         with open(ruta_completa_archivo, "wb") as f:
             f.write(response.content)
 
 
 def generar_diccionarios_datos():
  
-    archivos = os.listdir(RUTA_DATASETS_CONEVAL_POBREZA_MEXICO)
+    archivos = Path(RUTA_DATASETS_CONEVAL_POBREZA_MEXICO)
 
-    if not os.path.exists(RUTA_DICCIONARIOS_CONEVAL_POBREZA_MEXICO ):
-        os.makedirs(RUTA_DICCIONARIOS_CONEVAL_POBREZA_MEXICO, exist_ok=True)
+    directorio_diccionarios = Path(RUTA_DICCIONARIOS_CONEVAL_POBREZA_MEXICO)
+    if not directorio_diccionarios.exists():
+        directorio_diccionarios.mkdir(parents=True, exist_ok=True)
 
-    for archivo in archivos:
+    for archivo in archivos.iterdir():
 
-        ruta_archivo = os.path.join(RUTA_DATASETS_CONEVAL_POBREZA_MEXICO, archivo)
-
-        ruta_nombre_diccionario = os.path.join(RUTA_DICCIONARIOS_CONEVAL_POBREZA_MEXICO,"diccionario_" + archivo + ".csv")
+        ruta_archivo = Path(RUTA_DATASETS_CONEVAL_POBREZA_MEXICO) / archivo.name
+        nombre_diccionario = f"diccionario_{archivo.name}"
+        ruta_nombre_diccionario = Path(RUTA_DICCIONARIOS_CONEVAL_POBREZA_MEXICO) / nombre_diccionario
 
         df_datos = pd.read_csv(ruta_archivo, encoding='latin-1', sep=';')
 
@@ -67,20 +68,18 @@ def generar_diccionarios_datos():
                 "descripcion": str(""),
                 "tipo_dato": str(df_datos[col].dtype),
                 "valores_unicos": str(df_datos[col].unique().tolist()),
-                "valores_nulos": df_datos[col].isnull().sum(),
-                
+                "valores_nulos": df_datos[col].isnull().sum()
             }
 
             df_diccionario = pd.DataFrame(datos, index=[0])
-
             df_diccionario = df_diccionario.T
-
             df_diccionario.to_csv(ruta_nombre_diccionario)
+        
 
 def main():
-    print("Descargado datos CONEVAL... \n")
+    print("     Descargado datos CONEVAL... \n")
     descarga_datos_CONEVAL_pobreza_mexico()
-    print("Generando diccionario datos CONEVAL... \n")
+    print("     Generando diccionario datos CONEVAL... \n")
     generar_diccionarios_datos()
 
 if __name__ == "__main__":

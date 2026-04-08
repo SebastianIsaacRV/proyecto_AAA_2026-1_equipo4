@@ -156,3 +156,205 @@
 ════════════════════════════════════════════════════════════
 2026-03-24 09:17:14,511 [WARNING] Datasets con error (1):
 2026-03-24 09:17:14,511 [WARNING]   - indice_marginacion_municipal_2020.csv: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 15:53:26,449 [INFO] Modo: descarga nacional completa
+2026-04-07 15:53:26,450 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 15:53:26,450 [INFO] Dataset : incidencia_delictiva_municipal.csv
+2026-04-07 15:53:26,450 [INFO] Fuente  : SESNSP – Incidencia delictiva municipal 2015-2025
+2026-04-07 15:53:26,451 [INFO] URL     : https://repodatos.atdt.gob.mx/api_update/sesnsp/incidencia_delictiva/IDM_NM_dic25.csv
+2026-04-07 15:53:27,294 [INFO]   ... 10.0 MB descargados
+2026-04-07 15:53:28,996 [INFO]   ... 20.1 MB descargados
+2026-04-07 15:53:30,778 [INFO]   ... 30.0 MB descargados
+2026-04-07 15:53:32,556 [INFO]   ... 40.1 MB descargados
+2026-04-07 15:53:34,300 [INFO]   ... 50.0 MB descargados
+2026-04-07 15:53:36,074 [INFO]   ... 60.0 MB descargados
+2026-04-07 15:53:37,906 [INFO]   ... 70.1 MB descargados
+2026-04-07 15:53:39,855 [INFO]   ... 80.0 MB descargados
+2026-04-07 15:53:41,333 [INFO]   ... 90.0 MB descargados
+2026-04-07 15:53:43,381 [INFO]   ... 100.1 MB descargados
+2026-04-07 15:53:45,016 [INFO]   ... 110.0 MB descargados
+2026-04-07 15:53:46,532 [INFO]   ... 120.0 MB descargados
+2026-04-07 15:53:48,301 [INFO]   ... 130.0 MB descargados
+2026-04-07 15:53:50,179 [INFO]   ... 140.0 MB descargados
+2026-04-07 15:53:51,834 [INFO]   ... 150.0 MB descargados
+2026-04-07 15:53:53,761 [INFO]   ... 160.0 MB descargados
+2026-04-07 15:53:55,412 [INFO]   ... 170.1 MB descargados
+2026-04-07 15:53:57,163 [INFO]   ... 180.0 MB descargados
+2026-04-07 15:53:57,164 [INFO]   ... 180.0 MB descargados
+2026-04-07 15:53:58,931 [INFO]   ... 190.0 MB descargados
+2026-04-07 15:54:00,459 [INFO]   ... 200.0 MB descargados
+2026-04-07 15:54:02,578 [INFO]   ... 210.1 MB descargados
+2026-04-07 15:54:04,297 [INFO]   ... 220.0 MB descargados
+2026-04-07 15:54:05,908 [INFO]   ... 230.0 MB descargados
+2026-04-07 15:54:07,762 [INFO]   ... 240.0 MB descargados
+2026-04-07 15:54:09,482 [INFO]   ... 250.0 MB descargados
+2026-04-07 15:54:11,007 [INFO]   ... 260.0 MB descargados
+2026-04-07 15:54:12,861 [INFO]   ... 270.0 MB descargados
+2026-04-07 15:54:14,484 [INFO]   ... 280.0 MB descargados
+2026-04-07 15:54:16,139 [INFO]   ... 290.0 MB descargados
+2026-04-07 15:54:18,251 [INFO]   ... 300.0 MB descargados
+2026-04-07 15:54:19,805 [INFO]   ... 310.0 MB descargados
+2026-04-07 15:54:21,427 [INFO]   ... 320.0 MB descargados
+2026-04-07 15:54:23,087 [INFO]   ... 330.0 MB descargados
+2026-04-07 15:54:24,960 [INFO]   ... 340.0 MB descargados
+2026-04-07 15:54:26,555 [INFO]   ... 350.1 MB descargados
+2026-04-07 15:54:28,701 [INFO]   ... 360.1 MB descargados
+2026-04-07 15:54:28,868 [INFO]   Descargado: 369860.7 KB
+2026-04-07 15:54:30,218 [INFO]   ✓ Guardado en: ../data/raw/incidencia_delictiva_municipal.csv
+2026-04-07 15:54:30,247 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 15:54:30,248 [INFO] Dataset : incidencia_delictiva_estatal.csv
+2026-04-07 15:54:30,248 [INFO] Fuente  : SESNSP – Incidencia delictiva estatal 2015-2025
+2026-04-07 15:54:30,248 [INFO] URL     : https://repodatos.atdt.gob.mx/api_update/sesnsp/incidencia_delictiva/INM_estatal_dic25.csv
+2026-04-07 15:54:31,951 [INFO]   ... 10.0 MB descargados
+2026-04-07 15:54:33,300 [INFO]   ... 20.0 MB descargados
+2026-04-07 15:54:34,396 [INFO]   ... 30.0 MB descargados
+2026-04-07 15:54:36,071 [INFO]   ... 40.0 MB descargados
+2026-04-07 15:54:37,886 [INFO]   ... 50.0 MB descargados
+2026-04-07 15:54:38,400 [INFO]   Descargado: 55139.6 KB
+2026-04-07 15:54:38,514 [INFO]   ✓ Guardado en: ../data/raw/incidencia_delictiva_estatal.csv
+2026-04-07 15:54:38,521 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 15:54:38,521 [INFO] Dataset : indice_marginacion_municipal_2020.csv
+2026-04-07 15:54:38,521 [INFO] Fuente  : CONAPO – Índice de marginación municipal 2020
+2026-04-07 15:54:38,522 [INFO] URL     : https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 15:54:38,522 [WARNING]   SSL verification desactivado para este dominio.
+2026-04-07 15:54:38,675 [WARNING]   Intento 1/3 fallido: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 15:54:43,757 [WARNING]   Intento 2/3 fallido: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 15:54:48,728 [WARNING]   Intento 3/3 fallido: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 15:54:48,729 [ERROR]   ✗ ERROR en 'indice_marginacion_municipal_2020.csv': 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 15:54:48,729 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 15:54:48,730 [INFO] Dataset : pobreza_municipal_2020.csv
+2026-04-07 15:54:48,730 [INFO] Fuente  : CONEVAL – Indicadores de pobreza municipal 2020
+2026-04-07 15:54:48,730 [INFO] URL     : https://www.coneval.org.mx/Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores de pobreza municipal_2020.csv
+2026-04-07 15:54:48,935 [WARNING]   Intento 1/3 fallido: HTTPSConnectionPool(host='www.coneval.org.mx', port=443): Max retries exceeded with url: /Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores%20de%20pobreza%20municipal_2020.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)')))
+2026-04-07 15:54:54,101 [WARNING]   Intento 2/3 fallido: HTTPSConnectionPool(host='www.coneval.org.mx', port=443): Max retries exceeded with url: /Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores%20de%20pobreza%20municipal_2020.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)')))
+2026-04-07 15:54:59,261 [WARNING]   Intento 3/3 fallido: HTTPSConnectionPool(host='www.coneval.org.mx', port=443): Max retries exceeded with url: /Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores%20de%20pobreza%20municipal_2020.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)')))
+2026-04-07 15:54:59,261 [ERROR]   ✗ ERROR en 'pobreza_municipal_2020.csv': HTTPSConnectionPool(host='www.coneval.org.mx', port=443): Max retries exceeded with url: /Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores%20de%20pobreza%20municipal_2020.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)')))
+2026-04-07 15:54:59,261 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 15:54:59,261 [INFO] Dataset : censo_iter_municipios_2020.csv
+2026-04-07 15:54:59,261 [INFO] Fuente  : INEGI – Censo 2020 ITER (~500 MB ZIP, puede tardar varios minutos)
+2026-04-07 15:54:59,261 [INFO] URL     : https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip
+2026-04-07 15:55:07,044 [INFO]   ... 10.0 MB descargados
+2026-04-07 15:55:17,923 [INFO]   ... 20.0 MB descargados
+2026-04-07 15:55:22,420 [INFO]   ... 30.0 MB descargados
+2026-04-07 15:55:25,416 [INFO]   Descargado: 35757.6 KB
+2026-04-07 15:55:25,418 [INFO]   Extrayendo 'iter_00_cpv2020/conjunto_de_datos/conjunto_de_datos_iter_00CSV20.csv' del ZIP…
+2026-04-07 15:55:26,034 [INFO]   Extraído CSV: 146153.2 KB
+2026-04-07 15:55:26,453 [INFO]   ✓ Guardado en: ../data/raw/censo_iter_municipios_2020.csv
+2026-04-07 15:55:26,469 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 15:55:26,469 [INFO] Dataset : indicadores_laborales_municipios.csv
+2026-04-07 15:55:26,469 [INFO] Fuente  : INEGI – Indicadores laborales municipales (PEA, ocupación, informalidad)
+2026-04-07 15:55:26,470 [INFO] URL     : https://www.inegi.org.mx/contenidos/programas/ilmm/2020/datosabiertos/ILMM_2020.csv
+2026-04-07 15:55:26,548 [INFO]   ... 0.0 MB descargados
+2026-04-07 15:55:26,548 [INFO]   Descargado: 2.2 KB
+2026-04-07 15:55:26,549 [INFO]   ✓ Guardado en: ../data/raw/indicadores_laborales_municipios.csv
+2026-04-07 15:55:26,549 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-07 15:55:26,549 [WARNING] Datasets con error (2):
+2026-04-07 15:55:26,549 [WARNING]   - indice_marginacion_municipal_2020.csv: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 15:55:26,549 [WARNING]   - pobreza_municipal_2020.csv: HTTPSConnectionPool(host='www.coneval.org.mx', port=443): Max retries exceeded with url: /Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores%20de%20pobreza%20municipal_2020.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)')))
+2026-04-07 16:09:08,290 [INFO] Modo: descarga nacional completa
+2026-04-07 16:09:08,290 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 16:09:08,290 [INFO] Dataset : incidencia_delictiva_municipal.csv
+2026-04-07 16:09:08,290 [INFO] Fuente  : SESNSP – Incidencia delictiva municipal 2015-2025
+2026-04-07 16:09:08,290 [INFO] URL     : https://repodatos.atdt.gob.mx/api_update/sesnsp/incidencia_delictiva/IDM_NM_dic25.csv
+2026-04-07 16:09:09,190 [INFO]   ... 10.0 MB descargados
+2026-04-07 16:09:10,865 [INFO]   ... 20.1 MB descargados
+2026-04-07 16:09:12,752 [INFO]   ... 30.0 MB descargados
+2026-04-07 16:09:14,621 [INFO]   ... 40.1 MB descargados
+2026-04-07 16:09:16,368 [INFO]   ... 50.0 MB descargados
+2026-04-07 16:09:17,940 [INFO]   ... 60.0 MB descargados
+2026-04-07 16:09:19,828 [INFO]   ... 70.1 MB descargados
+2026-04-07 16:09:21,430 [INFO]   ... 80.0 MB descargados
+2026-04-07 16:09:23,337 [INFO]   ... 90.0 MB descargados
+2026-04-07 16:09:25,056 [INFO]   ... 100.1 MB descargados
+2026-04-07 16:09:26,635 [INFO]   ... 110.0 MB descargados
+2026-04-07 16:09:28,653 [INFO]   ... 120.0 MB descargados
+2026-04-07 16:09:30,244 [INFO]   ... 130.0 MB descargados
+2026-04-07 16:09:32,166 [INFO]   ... 140.0 MB descargados
+2026-04-07 16:09:33,910 [INFO]   ... 150.0 MB descargados
+2026-04-07 16:09:35,370 [INFO]   ... 160.0 MB descargados
+2026-04-07 16:09:37,239 [INFO]   ... 170.1 MB descargados
+2026-04-07 16:09:39,089 [INFO]   ... 180.0 MB descargados
+2026-04-07 16:09:39,089 [INFO]   ... 180.0 MB descargados
+2026-04-07 16:09:40,710 [INFO]   ... 190.0 MB descargados
+2026-04-07 16:09:42,411 [INFO]   ... 200.0 MB descargados
+2026-04-07 16:09:46,400 [INFO]   ... 210.1 MB descargados
+2026-04-07 16:09:48,754 [INFO]   ... 220.0 MB descargados
+2026-04-07 16:09:50,303 [INFO]   ... 230.0 MB descargados
+2026-04-07 16:09:51,726 [INFO]   ... 240.0 MB descargados
+2026-04-07 16:09:52,649 [INFO]   ... 250.0 MB descargados
+2026-04-07 16:09:54,490 [INFO]   ... 260.0 MB descargados
+2026-04-07 16:09:55,957 [INFO]   ... 270.0 MB descargados
+2026-04-07 16:09:57,729 [INFO]   ... 280.0 MB descargados
+2026-04-07 16:09:59,618 [INFO]   ... 290.0 MB descargados
+2026-04-07 16:10:01,252 [INFO]   ... 300.0 MB descargados
+2026-04-07 16:10:03,425 [INFO]   ... 310.0 MB descargados
+2026-04-07 16:10:04,885 [INFO]   ... 320.0 MB descargados
+2026-04-07 16:10:06,619 [INFO]   ... 330.0 MB descargados
+2026-04-07 16:10:09,509 [INFO]   ... 340.0 MB descargados
+2026-04-07 16:10:11,223 [INFO]   ... 350.1 MB descargados
+2026-04-07 16:10:12,821 [INFO]   ... 360.1 MB descargados
+2026-04-07 16:10:12,829 [INFO]   Descargado: 369860.7 KB
+2026-04-07 16:10:14,174 [INFO]   ✓ Guardado en: ../data/raw/incidencia_delictiva_municipal.csv
+2026-04-07 16:10:14,205 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 16:10:14,205 [INFO] Dataset : incidencia_delictiva_estatal.csv
+2026-04-07 16:10:14,206 [INFO] Fuente  : SESNSP – Incidencia delictiva estatal 2015-2025
+2026-04-07 16:10:14,206 [INFO] URL     : https://repodatos.atdt.gob.mx/api_update/sesnsp/incidencia_delictiva/INM_estatal_dic25.csv
+2026-04-07 16:10:14,849 [INFO]   ... 10.0 MB descargados
+2026-04-07 16:10:16,527 [INFO]   ... 20.0 MB descargados
+2026-04-07 16:10:18,367 [INFO]   ... 30.0 MB descargados
+2026-04-07 16:10:20,050 [INFO]   ... 40.0 MB descargados
+2026-04-07 16:10:21,822 [INFO]   ... 50.0 MB descargados
+2026-04-07 16:10:22,458 [INFO]   Descargado: 55139.6 KB
+2026-04-07 16:10:22,575 [INFO]   ✓ Guardado en: ../data/raw/incidencia_delictiva_estatal.csv
+2026-04-07 16:10:22,582 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 16:10:22,582 [INFO] Dataset : indice_marginacion_municipal_2020.csv
+2026-04-07 16:10:22,582 [INFO] Fuente  : CONAPO – Índice de marginación municipal 2020
+2026-04-07 16:10:22,582 [INFO] URL     : https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 16:10:22,582 [WARNING]   SSL verification desactivado para este dominio.
+2026-04-07 16:10:22,743 [WARNING]   Intento 1/3 fallido: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 16:10:27,820 [WARNING]   Intento 2/3 fallido: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 16:10:32,915 [WARNING]   Intento 3/3 fallido: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 16:10:32,916 [ERROR]   ✗ ERROR en 'indice_marginacion_municipal_2020.csv': 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 16:10:32,916 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 16:10:32,916 [INFO] Dataset : pobreza_municipal_2020.csv
+2026-04-07 16:10:32,917 [INFO] Fuente  : CONEVAL – Indicadores de pobreza municipal 2020
+2026-04-07 16:10:32,917 [INFO] URL     : https://www.coneval.org.mx/Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores de pobreza municipal_2020.csv
+2026-04-07 16:10:33,126 [WARNING]   Intento 1/3 fallido: HTTPSConnectionPool(host='www.coneval.org.mx', port=443): Max retries exceeded with url: /Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores%20de%20pobreza%20municipal_2020.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)')))
+2026-04-07 16:10:38,283 [WARNING]   Intento 2/3 fallido: HTTPSConnectionPool(host='www.coneval.org.mx', port=443): Max retries exceeded with url: /Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores%20de%20pobreza%20municipal_2020.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)')))
+2026-04-07 16:10:43,442 [WARNING]   Intento 3/3 fallido: HTTPSConnectionPool(host='www.coneval.org.mx', port=443): Max retries exceeded with url: /Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores%20de%20pobreza%20municipal_2020.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)')))
+2026-04-07 16:10:43,442 [ERROR]   ✗ ERROR en 'pobreza_municipal_2020.csv': HTTPSConnectionPool(host='www.coneval.org.mx', port=443): Max retries exceeded with url: /Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores%20de%20pobreza%20municipal_2020.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)')))
+2026-04-07 16:10:43,442 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 16:10:43,443 [INFO] Dataset : censo_iter_municipios_2020.csv
+2026-04-07 16:10:43,443 [INFO] Fuente  : INEGI – Censo 2020 ITER (~500 MB ZIP, puede tardar varios minutos)
+2026-04-07 16:10:43,443 [INFO] URL     : https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip
+2026-04-07 16:10:47,988 [INFO]   ... 10.0 MB descargados
+2026-04-07 16:10:53,677 [INFO]   ... 20.0 MB descargados
+2026-04-07 16:11:01,113 [INFO]   ... 30.0 MB descargados
+2026-04-07 16:11:06,271 [INFO]   Descargado: 35757.6 KB
+2026-04-07 16:11:06,276 [INFO]   Extrayendo 'iter_00_cpv2020/conjunto_de_datos/conjunto_de_datos_iter_00CSV20.csv' del ZIP…
+2026-04-07 16:11:06,914 [INFO]   Extraído CSV: 146153.2 KB
+2026-04-07 16:11:07,297 [INFO]   ✓ Guardado en: ../data/raw/censo_iter_municipios_2020.csv
+2026-04-07 16:11:07,314 [INFO] 
+────────────────────────────────────────────────────────────
+2026-04-07 16:11:07,314 [INFO] Dataset : indicadores_laborales_municipios.csv
+2026-04-07 16:11:07,314 [INFO] Fuente  : INEGI – Indicadores laborales municipales (PEA, ocupación, informalidad)
+2026-04-07 16:11:07,315 [INFO] URL     : https://www.inegi.org.mx/contenidos/programas/ilmm/2020/datosabiertos/ILMM_2020.csv
+2026-04-07 16:11:07,393 [INFO]   ... 0.0 MB descargados
+2026-04-07 16:11:07,393 [INFO]   Descargado: 2.2 KB
+2026-04-07 16:11:07,394 [INFO]   ✓ Guardado en: ../data/raw/indicadores_laborales_municipios.csv
+2026-04-07 16:11:07,394 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-07 16:11:07,394 [WARNING] Datasets con error (2):
+2026-04-07 16:11:07,394 [WARNING]   - indice_marginacion_municipal_2020.csv: 403 Client Error: Forbidden for url: https://www.datos.gob.mx/dataset/d8f2a534-bcee-4114-853d-82982a81ce24/resource/551d8f48-5d0c-4d11-964a-e2911f732615/download/imm_2020-3.csv
+2026-04-07 16:11:07,394 [WARNING]   - pobreza_municipal_2020.csv: HTTPSConnectionPool(host='www.coneval.org.mx', port=443): Max retries exceeded with url: /Informes/Pobreza/Datos_abiertos/pobreza_municipal_2010-2020/indicadores%20de%20pobreza%20municipal_2020.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1028)')))
