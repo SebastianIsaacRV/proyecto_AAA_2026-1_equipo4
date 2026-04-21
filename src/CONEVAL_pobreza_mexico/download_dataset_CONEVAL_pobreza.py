@@ -189,39 +189,41 @@ def dictionary_creation(url_datasets:list[dict[str,str]], path_datasets:str, pat
         
         dictionary_name = f"diccionario_{file.name}"
         dictionary: str = Path(path_directory_dictionaries) / dictionary_name
-        #path_dataset: str = Path(path_datasets) / file.name
 
         if file.is_file() and file.suffix.lower() == ext_file.lower():
             try:
-                df = pd.read_csv(file, encoding='latin-1', sep=';')                
+                df = pd.read_csv(file, encoding='latin-1', sep=',')
+                columnas:list[str] = df.columns.to_list()
+                rows = list() 
+                for col in columnas:
+                
+                    is_numeric = pd.api.types.is_numeric_dtype(df[col])
+                
+                    if is_numeric:
+                        example_value   = None
+                        min_value       = df[col].min()
+                        max_value       = df[col].max()
+                    else:
+                        serie_not_nulls = df[col].dropna()
+                        example_value_ = serie_not_nulls.iloc[0] if not serie_not_nulls.empty else "Sin valores"
+                        example_value   = example_value_
+                        min_value       = None
+                        max_value       = None
+                    
+                    rows.append({
+                        "nombre":col,
+                        "descripcion":str(""),
+                        "tipo_dato":str(df[col].dtype),
+                        "valores_nulos":df[col].isnull().sum(),
+                        "valor_minimo":min_value,
+                        "valor_maximo":max_value, 
+                        "valor_ejemplo":example_value
+                    })
+                df_diccionario = pd.DataFrame(rows)  
+                df_diccionario.to_csv(dictionary, index=False)
             except Exception as e:
-                logger.warning(f"Error reading: [{file.name}] - {e}")
+                logger.warning(f"Error reading: [{file.name}] or creating the dictionary of this dataset - {e}")
                 continue
-            
-            filas = list()
-
-            for col in df.columns:
-                '''
-                filas.append({
-                    "nombre":col,
-                    "descripcion":"",
-                    "tipo_dato":str(df[col].dtype),
-                    "valores_unicos":str(df[col].unique().tolist()),
-                    "cant_unicos":df[col].nunique(),
-                    "valores_nulos":int(df[col].isnull().sum()),
-                })
-                '''
-                datos = {
-                    "nombre": col,
-                    "descripcion": str(""),
-                    "tipo_dato": str(df[col].dtype),
-                    "valores_unicos": str(df[col].unique().tolist()),
-                    "valores_nulos": df[col].isnull().sum()
-                    }
-                df_diccionario = pd.DataFrame(datos, index=[0])
-                df_diccionario = df_diccionario.T
-                df_diccionario.to_csv(dictionary)
-
         else:
             logger.info(f"File: [{file}] ist't a .csv file")
 
