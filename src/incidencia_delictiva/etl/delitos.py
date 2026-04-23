@@ -109,6 +109,9 @@ def transform_and_load_delitos_chunks():
     for i, chunk in enumerate(tqdm(chunks, desc="Procesando chunks")):
         chunk = clean_columns(chunk)
 
+        # Calcula el total de delitos
+        chunk['total_anual'] = chunk.loc[:, 'enero':'diciembre'].sum(axis=1)
+
         chunk['cvegeo'] = (
             chunk['clave_ent'].astype(str).str.zfill(2) +
             chunk['cve._municipio'].astype(str).str.zfill(3)
