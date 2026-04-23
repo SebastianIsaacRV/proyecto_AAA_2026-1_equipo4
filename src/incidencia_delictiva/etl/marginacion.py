@@ -66,9 +66,9 @@ def transform_marginacion():
     df = clean_columns(df)
 
     df['cvegeo'] = (
-        df['cve_ent'].astype(str).str.zfill(2) +
-        df['cve_mun'].astype(str).str.zfill(3)
-    )
+            df['cve_ent'].astype(int).astype(str).str.zfill(2) +
+            (df['cve_mun'].astype(int) % 1000).astype(str).str.zfill(3)
+        )
 
     column_mapping = {
         'pob_tot': 'poblacion_total',

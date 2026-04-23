@@ -113,8 +113,8 @@ def transform_and_load_delitos_chunks():
         chunk['total_anual'] = chunk.loc[:, 'enero':'diciembre'].sum(axis=1)
 
         chunk['cvegeo'] = (
-            chunk['clave_ent'].astype(str).str.zfill(2) +
-            chunk['cve._municipio'].astype(str).str.zfill(3)
+            chunk['clave_ent'].astype(int).astype(str).str.zfill(2) +
+            (chunk['cve._municipio'].astype(int) % 1000).astype(str).str.zfill(3)
         )
 
         con.register("temp_chunk", chunk)

@@ -73,8 +73,8 @@ def clean_columns(df):
 
 def add_cvegeo(df):
     df['cvegeo'] = (
-        df['clave_entidad'].astype(str).str.zfill(2) +
-        df['clave_municipio'].astype(str).str.zfill(3)
+        df['clave_entidad'].astype(int).astype(str).str.zfill(2) +
+        (df['clave_municipio'].astype(int) % 1000).astype(str).str.zfill(3)
     )
     return df
 
