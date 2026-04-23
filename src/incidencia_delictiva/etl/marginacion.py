@@ -70,6 +70,24 @@ def transform_marginacion():
         df['cve_mun'].astype(str).str.zfill(3)
     )
 
+    column_mapping = {
+        'pob_tot': 'poblacion_total',
+        'analf': 'porcentaje_analfabetismo',
+        'sbasc': 'porcentaje_sin_educacion_basica',
+        'ovsde': 'porcentaje_sin_drenaje_ni_excusado',
+        'ovsee': 'porcentaje_sin_energia_electrica',
+        'ovsae': 'porcentaje_sin_agua_entubada',
+        'ovpt': 'porcentaje_con_piso_tierra',
+        'vhac': 'porcentaje_viviendas_hacinamiento',
+        'pl.5000': 'porcentaje_localidades_menores_5000',
+        'po2sm': 'porcentaje_ocupados_hasta_2_salarios_minimos',
+        'im_2020': 'indice_marginacion_2020',
+        'gm_2020': 'grado_marginacion_2020',
+        'imn_2020': 'indice_marginacion_normalizado_2020'
+    }
+
+    df = df.rename(columns=column_mapping)
+
     output_path = MARGINACION_PROCESSED_DIR / "marginacion.parquet"
     df.to_parquet(output_path, index=False)
 
