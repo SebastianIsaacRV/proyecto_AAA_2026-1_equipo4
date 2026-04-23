@@ -119,13 +119,43 @@ def transform_grupo_residencia(df):
     # Crear columna cvegeo
     df = add_cvegeo(df)
 
-    # Seleccionar columna util: 'grupo'
-    df = df[['cvegeo', 'grupo']]
-
     # Filtrar parte de string útil
-    df['grupo'] = df['grupo'].str.split(':').str[-1].astype(str)
+    df['grupo'] = df['grupo'].str.split(':').str[-1].str.strip().astype(str)
 
-    return df
+    # Filtrar columnas útiles
+    columns_to_remove = [
+        'clave_entidad', 
+        'entidad_federativa', 
+        'clave_municipio',
+        'municipio', 
+        'periodo', 
+        'entidad_federativa_etq', 
+        'periodo', 
+        'entidad'
+    ]
+    
+    df = df.drop(columns=columns_to_remove)
+
+    # Pivotar por grupo
+    df_pivot = df.pivot_table(
+        index='cvegeo', 
+        columns='grupo', 
+        values=df.columns.tolist(), 
+        aggfunc='first'
+    )
+
+    # Renombrar columnas por grupo
+    df_pivot.columns = [
+        f'{col}_{grupo}' for col, grupo in df_pivot.columns
+    ]
+
+    df_pivot = df_pivot.reset_index()
+
+    cols_drop = ['grupo_rural', 'grupo_urbano', 'cvegeo_rural', 'cvegeo_urbano']
+
+    df_pivot = df_pivot.drop(columns=cols_drop, errors='ignore')
+
+    return df_pivot
 
 
 def transform_pobreza():
@@ -136,13 +166,15 @@ def transform_pobreza():
     indicadores = transform_indicadores(data['indicadores'])
     grupo_residencia = transform_grupo_residencia(data['grupo_residencia'])
 
-    # Corregir el join
-    # pobreza = indicadores.merge(grupo_residencia, on='cvegeo', how='left')
+    # Merge indicadores y grupo residencia
+    pobreza = indicadores.merge(grupo_residencia, on='cvegeo', how='left')
 
-    pobreza = indicadores.copy()
-
+    indidcadores_path = POBREZA_PROCESSED_DIR / "indicadores.parquet"
+    grupo_residencia_path = POBREZA_PROCESSED_DIR / "grupo_residencia.parquet"
     output_path = POBREZA_PROCESSED_DIR / "pobreza.parquet"
-
+    
+    indicadores.to_parquet(indidcadores_path, index=False)
+    grupo_residencia.to_parquet(grupo_residencia_path, index=False)
     pobreza.to_parquet(output_path, index=False)
 
     log.info(f'Datos de pobreza transformados guardados en: {POBREZA_PROCESSED_DIR}')
