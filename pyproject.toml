@@ -12,6 +12,7 @@ dependencies = []
 [project.scripts]
 incidencia-delictiva = "incidencia_delictiva:main"
 incidencia-delictiva-etl = "incidencia_delictiva.pipelines.etl:run_all_pipelines"
+incidencia-delictiva-datasets = "incidencia_delictiva.pipelines.datasets:make_all_datasets"
 
 [project.optional-dependencies]
 data = [
