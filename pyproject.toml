@@ -18,7 +18,7 @@ incidencia-delictiva-datasets = "incidencia_delictiva.pipelines.datasets:make_al
 data = [
     "numpy>=2.2.6",
     "pandas>=2.3.3",
-    "pyarrow>=24.0.0",
+    "pyarrow>=14,<20",
     "requests>=2.33.1",
     "scipy>=1.15.3",
     "tqdm>=4.67.3",
@@ -40,10 +40,15 @@ ml = [
 ]
 utils = [
     "colorlog>=6.10.1",
+    "dotenv>=0.9.9",
     "loguru>=0.7.3",
 ]
 database = [
     "duckdb>=1.5.2",
+]
+tracking = [
+    "dagshub>=0.7.0",
+    "mlflow>=2.20,<3",
 ]
 
 [build-system]
